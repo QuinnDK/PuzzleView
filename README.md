@@ -3,14 +3,8 @@ Android Jigsaw puzzle support，inspired by Instagram's layout.
 
 Release to 2.0, now support slant mode and round cornors.
 
-[中文README](https://github.com/wuapnjie/PuzzleView/blob/master/README_CN.md)
-
-the apk file is here--->[http://fir.im/puzzle0607](http://fir.im/puzzle0607)
-
-### Screenshots
-Due the size of the gif file, the example below may not render well, in that case you can view the demo video on youtube.
-
-[Click here to see video demo](https://www.youtube.com/watch?v=jfOJCh-uDIo)
+[中文README](https://github.com/QuinnDK/PuzzleView-master/edit/master/README.md)
+.
 </br>
 </br>
 ![](https://github.com/wuapnjie/PuzzleView/blob/master/screenshots/screenshot1.png)
@@ -89,20 +83,12 @@ public class CustomLayout extends PuzzleLayout {
 }
 ```
 
-![](https://github.com/wuapnjie/PuzzleView/blob/master/screenshots/puzzle.png)
+![](https://github.com/QuinnDK/PuzzleView-master)
 
-### Finally
-to see some photos by puzzle
-[Click here](http://weibo.com/5350471787/E54jjxzlI)
-
-### Update
-* **2017/08/29**  2.0.0-alpha add slant mode puzzle, and to support round cornors
-* **2017/04/15**  1.1.1 add piece select listener
-* **2017/02/15**  1.1.0 add piece padding function 
 
 ### License
 
-    Copyright 2016 wuapnjie
+    Copyright 2019 dongkun
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
