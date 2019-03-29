@@ -1,0 +1,29 @@
+<resources>
+  <string name="app_name">Untra</string>
+  <string name="title_activity_process">ProcessActivity</string>
+
+  <string name="about_me">关于我</string>
+  <string name="my_info">一名普通的大学生，喜欢Android，喜欢探索新鲜事物。希望以后可以找到一个好工作。恩，加油。\n\n
+    Keep Calm and Carry on!</string>
+  <string name="about_project">关于本项目</string>
+  <string name="project_info">这个项目是看到Layout for instagram 后，觉得这个应用很神奇，于是就很想把它实现，就算不能100%实现，也想实现它的图片效果，想了很久应该怎么实现，后来看到一篇介绍View与Matrix的文章后，有了一点点想法</string>
+  <string name="about_thank">感谢</string>
+  <string name="thank_info">junyizhou的博客(从中得到了很多发散)\n
+        http://junyizhou.github.io/</string>
+  <string name="prompt.select.layout">选择布局</string>
+  <string name="prompt.playground">Playground</string>
+  <string name="prompt.save">保存</string>
+  <string name="prompt.edit">编辑</string>
+  <string name="prompt.replace">替换</string>
+  <string name="prompt.rotate">旋转</string>
+  <string name="prompt.flip.horizontal">镜像</string>
+  <string name="prompt.flip.vertical">翻转</string>
+  <string name="prompt.border">边框</string>
+  <string name="prompt_share_failed">分享失败</string>
+  <string name="prompt_share">分享</string>
+  <string name="prompt_save_success">保存成功</string>
+  <string name="prompt_save_failed">保存失败</string>
+  <string name="prompt.slant.test">斜线测试</string>
+    <string name="prompt.corner">圆角</string>
+
+</resources>
