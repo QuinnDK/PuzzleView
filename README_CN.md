@@ -6,20 +6,14 @@ Android拼图支持库，想法来自Layout for Instagram。
 英文[README](https://github.com/wuapnjie/PuzzleView/blob/master/README.md)
 
 ### Demo
-效果看视频
 
-[点击观看Youtube](https://www.youtube.com/watch?v=jfOJCh-uDIo)
-</br>
-[点击观看Youku](http://v.youku.com/v_show/id_XMTY5Nzk3NTYyMA==.html?beta&)
-
-
-![](https://github.com/wuapnjie/PuzzleView/blob/master/screenshots/screenshot1.png)
-![](https://github.com/wuapnjie/PuzzleView/blob/master/screenshots/screenshot2.png)
+![](https://github.com/QuinnDK/PuzzleView/blob/master/screenshots/screenshot1.png)
+![](https://github.com/QuinnDK/PuzzleView/blob/master/screenshots/screenshot2.png)
 
 **现在支持斜线模式和圆角拼图了**
 </br>
 </br>
-![](https://github.com/wuapnjie/PuzzleView/blob/master/screenshots/screenshot4.png)
+![](https://github.com/QuinnDK/PuzzleView/blob/master/screenshots/screenshot4.png)
 
 ### 使用
 在build.gradle添加，当然你也可以直接导入library module，方便修改。
@@ -71,7 +65,7 @@ PuzzleView取决于PuzzleLayout，当然我们可以自定义PuzzleLayout
 如果你不想自定义PuzzleLayout，该库中也内置了许多Layout样式，理论上Instagram Layout中的样式都有，没有你也可以自己写。
 </br>
 在这个demo中有个Playground页面，上面展示了所有的内置Layout样式，你可以点击查看效果，demo中自带了几张图。
-![](https://github.com/wuapnjie/PuzzleView/blob/master/screenshots/screenshot3.png)
+![](https://github.com/QuinnDK/PuzzleView/blob/master/screenshots/screenshot3.png)
 
 ### 自定义布局
 自定义PuzzleLayout也非常简单. 只要继承PuzzleLayout并重写layout()方法就好了。
@@ -93,19 +87,12 @@ public class CustomLayout extends PuzzleLayout {
 
 当然可以看内置的Layout怎么编写从而学习
 
-![](https://github.com/wuapnjie/PuzzleView/blob/master/screenshots/puzzle.png)
+![](https://github.com/QuinnDK/PuzzleView/blob/master/screenshots/puzzle.png)
 
-### 最后
-看几张效果图
-[Click here](http://weibo.com/5350471787/E54jjxzlI)
 
-### 更新
-* **2017/08/29**  2.0.0-alpha add slant mode puzzle, and to support round cornors
-* **2017/04/15**  1.1.1 add piece select listener
-* **2017/02/15**  1.1.0 add piece padding function 
 ### License
 
-    Copyright 2016 wuapnjie
+    Copyright 2019 dongkun
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
