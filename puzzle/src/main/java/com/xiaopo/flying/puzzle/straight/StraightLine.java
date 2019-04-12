@@ -7,7 +7,7 @@ import com.xiaopo.flying.puzzle.Line;
 
 import static java.lang.Math.max;
 import static java.lang.Math.min;
-
+//分割矩形
 class StraightLine implements Line {
   private PointF start;
   private PointF end;

@@ -8,7 +8,7 @@ import com.xiaopo.flying.puzzle.Line;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
-
+//确定一个边界
 class StraightArea implements Area {
   StraightLine lineLeft;
   StraightLine lineTop;

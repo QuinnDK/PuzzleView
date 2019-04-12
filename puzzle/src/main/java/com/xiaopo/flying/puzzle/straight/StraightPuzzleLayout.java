@@ -15,7 +15,7 @@ import java.util.List;
 import static com.xiaopo.flying.puzzle.straight.StraightUtils.createLine;
 import static com.xiaopo.flying.puzzle.straight.StraightUtils.cutAreaCross;
 import static com.xiaopo.flying.puzzle.straight.StraightUtils.cutAreaSpiral;
-
+//拼图布局类，可自定义布局，一些简单方法帮助快速布局
 public abstract class StraightPuzzleLayout implements PuzzleLayout {
   private RectF bounds;
   private StraightArea outerArea;

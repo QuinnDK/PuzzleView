@@ -58,11 +58,11 @@ public class ProcessActivity extends AppCompatActivity implements View.OnClickLi
       }
     });
   }
-
+//重新开始
   @Override protected void onResume() {
     super.onResume();
   }
-
+//加载图片
   private void loadPhoto() {
     if (bitmapPaint == null) {
       loadPhotoFromRes();
@@ -109,7 +109,7 @@ public class ProcessActivity extends AppCompatActivity implements View.OnClickLi
       targets.add(target);
     }
   }
-
+//从库中加载图片
   private void loadPhotoFromRes() {
     final List<Bitmap> pieces = new ArrayList<>();
 
@@ -152,6 +152,7 @@ public class ProcessActivity extends AppCompatActivity implements View.OnClickLi
     }
   }
 
+//视图
   private void initView() {
     ImageView btnBack = (ImageView) findViewById(R.id.btn_back);
     btnBack.setOnClickListener(new View.OnClickListener() {
@@ -160,12 +161,12 @@ public class ProcessActivity extends AppCompatActivity implements View.OnClickLi
       }
     });
 
-    FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-    fab.setOnClickListener(new View.OnClickListener() {
-      @Override public void onClick(View view) {
-        share();
-      }
-    });
+//    FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+//    fab.setOnClickListener(new View.OnClickListener() {
+//      @Override public void onClick(View view) {
+//        share();
+//      }
+//    });
 
     puzzleView = (PuzzleView) findViewById(R.id.puzzle_view);
     degreeSeekBar = (DegreeSeekBar) findViewById(R.id.degree_seek_bar);
@@ -242,29 +243,29 @@ public class ProcessActivity extends AppCompatActivity implements View.OnClickLi
       }
     });
   }
-
-  private void share() {
-    final File file = FileUtils.getNewFile(this, "Puzzle");
-
-    FileUtils.savePuzzle(puzzleView, file, 100, new Callback() {
-      @Override public void onSuccess() {
-        Intent shareIntent = new Intent(Intent.ACTION_SEND);
-        //Uri uri = Uri.fromFile(file);
-        Uri uri = FileProvider.getUriForFile(ProcessActivity.this,
-            "com.xiaopo.flying.photolayout.fileprovider", file);
-
-        if (uri != null) {
-          shareIntent.putExtra(Intent.EXTRA_STREAM, uri);
-          shareIntent.setType("image/*");
-          startActivity(Intent.createChooser(shareIntent, getString(R.string.prompt_share)));
-        }
-      }
-
-      @Override public void onFailed() {
-        Snackbar.make(puzzleView, R.string.prompt_share_failed, Snackbar.LENGTH_SHORT).show();
-      }
-    });
-  }
+//分享
+//  private void share() {
+//    final File file = FileUtils.getNewFile(this, "Puzzle");
+//
+//    FileUtils.savePuzzle(puzzleView, file, 100, new Callback() {
+//      @Override public void onSuccess() {
+//        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+//        //Uri uri = Uri.fromFile(file);
+//        Uri uri = FileProvider.getUriForFile(ProcessActivity.this,
+//            "com.xiaopo.flying.photolayout.fileprovider", file);
+//
+//        if (uri != null) {
+//          shareIntent.putExtra(Intent.EXTRA_STREAM, uri);
+//          shareIntent.setType("image/*");
+//          startActivity(Intent.createChooser(shareIntent, getString(R.string.prompt_share)));
+//        }
+//      }
+//
+//      @Override public void onFailed() {
+//        Snackbar.make(puzzleView, R.string.prompt_share_failed, Snackbar.LENGTH_SHORT).show();
+//      }
+//    });
+//  }
 
   @Override public void onClick(View view) {
     switch (view.getId()) {

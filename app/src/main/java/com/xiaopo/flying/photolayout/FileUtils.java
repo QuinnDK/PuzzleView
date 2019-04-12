@@ -1,5 +1,5 @@
 package com.xiaopo.flying.photolayout;
-
+//文件实用程序
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
