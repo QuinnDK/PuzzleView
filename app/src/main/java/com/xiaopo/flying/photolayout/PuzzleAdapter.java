@@ -17,13 +17,14 @@ public class PuzzleAdapter extends RecyclerView.Adapter<PuzzleAdapter.PuzzleView
   private List<PuzzleLayout> layoutData = new ArrayList<>();
   private List<Bitmap> bitmapData = new ArrayList<>();
   private OnItemClickListener onItemClickListener;
-
+//创建viewholder
+// 引用XML传给viewholder
   @Override public PuzzleViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
     View itemView =
         LayoutInflater.from(parent.getContext()).inflate(R.layout.item_puzzle, parent, false);
     return new PuzzleViewHolder(itemView);
   }
-
+//操作item
   @Override public void onBindViewHolder(PuzzleViewHolder holder, int position) {
     final PuzzleLayout puzzleLayout = layoutData.get(position);
 
@@ -32,7 +33,7 @@ public class PuzzleAdapter extends RecyclerView.Adapter<PuzzleAdapter.PuzzleView
     holder.puzzleView.setTouchEnable(false);
 
     holder.puzzleView.setPuzzleLayout(puzzleLayout);
-
+//对整个itemView进行监听
     holder.itemView.setOnClickListener(new View.OnClickListener() {
       @Override public void onClick(View v) {
         if (onItemClickListener != null) {
@@ -59,7 +60,7 @@ public class PuzzleAdapter extends RecyclerView.Adapter<PuzzleAdapter.PuzzleView
       holder.puzzleView.addPieces(bitmapData);
     }
   }
-
+//统计条目
   @Override public int getItemCount() {
     return layoutData == null ? 0 : layoutData.size();
   }
