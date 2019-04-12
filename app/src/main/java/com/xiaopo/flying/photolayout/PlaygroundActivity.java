@@ -69,7 +69,7 @@ public class PlaygroundActivity extends AppCompatActivity {
     ImageView btnClose = (ImageView) findViewById(R.id.btn_cancel);
     btnClose.setOnClickListener(new View.OnClickListener() {
       @Override public void onClick(View view) {
-        onBackPressed();
+        onBackPressed();//专门用来监听back键事件的
       }
     });
   }

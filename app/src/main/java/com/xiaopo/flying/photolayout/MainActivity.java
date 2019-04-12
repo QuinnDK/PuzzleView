@@ -181,7 +181,7 @@ public class MainActivity extends AppCompatActivity {
       }
     });
   }
-
+//显示更多对话
   private void showMoreDialog(View view) {
     PopupMenu popupMenu = new PopupMenu(this, view, Gravity.BOTTOM);
     popupMenu.inflate(R.menu.menu_main);
@@ -201,13 +201,13 @@ public class MainActivity extends AppCompatActivity {
     });
     popupMenu.show();
   }
-
+//显示信息
   private void showAboutInfo() {
     BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this);
     bottomSheetDialog.setContentView(R.layout.about_info);
     bottomSheetDialog.show();
   }
-
+//获取权限结果
   @Override public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
       @NonNull int[] grantResults) {
     super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -217,7 +217,7 @@ public class MainActivity extends AppCompatActivity {
       loadPhoto();
     }
   }
-
+//撤销
   @Override protected void onDestroy() {
     super.onDestroy();
 
@@ -227,7 +227,7 @@ public class MainActivity extends AppCompatActivity {
     bitmaps.clear();
     bitmaps = null;
   }
-
+//刷新框架
   private void refreshLayout() {
     puzzleList.post(new Runnable() {
       @Override public void run() {
@@ -235,7 +235,7 @@ public class MainActivity extends AppCompatActivity {
       }
     });
   }
-
+//获取位图
   public void fetchBitmap(final String path) {
     Log.d(TAG, "fetchBitmap: ");
     final Target target = new Target() {
@@ -271,12 +271,12 @@ public class MainActivity extends AppCompatActivity {
   }
 
   private static class PuzzleHandler extends Handler {
-    private WeakReference<MainActivity> mReference;
+    private WeakReference<MainActivity> mReference;//引用
 
     PuzzleHandler(MainActivity activity) {
       mReference = new WeakReference<>(activity);
     }
-
+//处理消息
     @Override public void handleMessage(Message msg) {
       super.handleMessage(msg);
       if (msg.what == 119) {

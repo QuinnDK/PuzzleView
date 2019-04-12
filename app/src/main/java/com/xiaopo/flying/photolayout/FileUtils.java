@@ -101,13 +101,13 @@ public class FileUtils {
         callback.onSuccess();
       }
     } catch (FileNotFoundException e) {
-      e.printStackTrace();
+      e.printStackTrace();//在命令行打印异常信息在程序中出错的位置及原因
       if (callback != null) {
         callback.onFailed();
       }
     } finally {
       if (bitmap != null) {
-        bitmap.recycle();
+        bitmap.recycle();//回收
       }
 
       if (outputStream != null) {

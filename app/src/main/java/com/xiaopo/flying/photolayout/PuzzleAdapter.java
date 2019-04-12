@@ -11,7 +11,7 @@ import com.xiaopo.flying.puzzle.PuzzleLayout;
 import com.xiaopo.flying.puzzle.SquarePuzzleView;
 import java.util.ArrayList;
 import java.util.List;
-
+//创建Adapter
 public class PuzzleAdapter extends RecyclerView.Adapter<PuzzleAdapter.PuzzleViewHolder> {
 
   private List<PuzzleLayout> layoutData = new ArrayList<>();
@@ -20,8 +20,8 @@ public class PuzzleAdapter extends RecyclerView.Adapter<PuzzleAdapter.PuzzleView
 //创建viewholder
 // 引用XML传给viewholder
   @Override public PuzzleViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-    View itemView =
-        LayoutInflater.from(parent.getContext()).inflate(R.layout.item_puzzle, parent, false);
+//    LayoutInflater.from指定写法
+    View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_puzzle, parent, false);
     return new PuzzleViewHolder(itemView);
   }
 //操作item
@@ -38,6 +38,7 @@ public class PuzzleAdapter extends RecyclerView.Adapter<PuzzleAdapter.PuzzleView
       @Override public void onClick(View v) {
         if (onItemClickListener != null) {
           int theme = 0;
+//          判断其左边对象是否为其右边类的实例，返回boolean类型的数据
           if (puzzleLayout instanceof NumberSlantLayout) {
             theme = ((NumberSlantLayout) puzzleLayout).getTheme();
           } else if (puzzleLayout instanceof NumberStraightLayout) {
@@ -68,7 +69,7 @@ public class PuzzleAdapter extends RecyclerView.Adapter<PuzzleAdapter.PuzzleView
   public void refreshData(List<PuzzleLayout> layoutData, List<Bitmap> bitmapData) {
     this.layoutData = layoutData;
     this.bitmapData = bitmapData;
-
+//引起界面重绘，会保留原有位置、数据信息
     notifyDataSetChanged();
   }
 //设置item监听

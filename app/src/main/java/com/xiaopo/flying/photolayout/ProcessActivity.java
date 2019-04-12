@@ -333,11 +333,11 @@ public class ProcessActivity extends AppCompatActivity implements View.OnClickLi
 
       //noinspection SuspiciousNameCombination
       Picasso.with(this)
-          .load("file:///" + path)
-          .resize(deviceWidth, deviceWidth)
-          .centerInside()
-          .config(Bitmap.Config.RGB_565)
-          .into(target);
+          .load("file:///" + path)//加载路径所指图片
+          .resize(deviceWidth, deviceWidth)//设置尺寸
+          .centerInside()//让View将图片展示完全
+          .config(Bitmap.Config.RGB_565)//设置
+          .into(target);//显示图片
     }
   }
 }
