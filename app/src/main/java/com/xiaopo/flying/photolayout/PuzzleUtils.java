@@ -24,7 +24,7 @@ public class PuzzleUtils {
   private PuzzleUtils() {
     //no instance
   }
-
+//选择线
   public static PuzzleLayout getPuzzleLayout(int type, int borderSize, int themeId) {
     if (type == 0) {
       switch (borderSize) {

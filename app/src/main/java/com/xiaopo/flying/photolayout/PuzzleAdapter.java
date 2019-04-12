@@ -71,7 +71,7 @@ public class PuzzleAdapter extends RecyclerView.Adapter<PuzzleAdapter.PuzzleView
 
     notifyDataSetChanged();
   }
-
+//设置item监听
   public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
     this.onItemClickListener = onItemClickListener;
   }
@@ -85,7 +85,7 @@ public class PuzzleAdapter extends RecyclerView.Adapter<PuzzleAdapter.PuzzleView
       puzzleView = (SquarePuzzleView) itemView.findViewById(R.id.puzzle);
     }
   }
-
+//接口
   public interface OnItemClickListener {
     void onItemClick(PuzzleLayout puzzleLayout, int themeId);
   }

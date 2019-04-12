@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
     deviceWidth = getResources().getDisplayMetrics().widthPixels;
 
     initView();
-
+//权限检查
     if (ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
         != PackageManager.PERMISSION_GRANTED
         || ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)
@@ -108,9 +108,11 @@ public class MainActivity extends AppCompatActivity {
 
     puzzleAdapter.setOnItemClickListener(new PuzzleAdapter.OnItemClickListener() {
       @Override public void onItemClick(PuzzleLayout puzzleLayout, int themeId) {
+//        跳转
         Intent intent = new Intent(MainActivity.this, ProcessActivity.class);
         intent.putStringArrayListExtra("photo_path", selectedPath);
         if (puzzleLayout instanceof SlantPuzzleLayout) {
+//          左边对象是否是右边类的实例
           intent.putExtra("type", 0);
         } else {
           intent.putExtra("type", 1);

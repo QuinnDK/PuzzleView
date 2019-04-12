@@ -35,31 +35,31 @@ public class FileUtils {
 
     return mediaStorageDir.getAbsolutePath();
   }
-
+//判断存储中存在性
   private static boolean isSDAvailable() {
     return Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED);
   }
-
+//获取新文件
   public static File getNewFile(Context context, String folderName) {
 
     SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.CHINA);
 
     String timeStamp = simpleDateFormat.format(new Date());
-
+//获取路径
     String path;
     if (isSDAvailable()) {
       path = getFolderName(folderName) + File.separator + timeStamp + ".jpg";
     } else {
       path = context.getFilesDir().getPath() + File.separator + timeStamp + ".jpg";
     }
-
+//判断文件路径是否存在，若不为空返回路径
     if (TextUtils.isEmpty(path)) {
       return null;
     }
 
     return new File(path);
   }
-
+//创建位图
   public static Bitmap createBitmap(PuzzleView puzzleView) {
     puzzleView.clearHandling();
 
@@ -72,7 +72,7 @@ public class FileUtils {
 
     return bitmap;
   }
-
+//存储文件
   public static void savePuzzle(PuzzleView puzzleView, File file, int quality, Callback callback) {
     Bitmap bitmap = null;
     FileOutputStream outputStream = null;

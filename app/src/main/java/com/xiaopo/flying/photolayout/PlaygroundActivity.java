@@ -25,11 +25,12 @@ public class PlaygroundActivity extends AppCompatActivity {
   }
 
   private void prefetchResPhoto() {
+//    数组
     final int[] resIds = new int[] {
         R.drawable.demo1, R.drawable.demo2, R.drawable.demo3, R.drawable.demo4, R.drawable.demo5,
         R.drawable.demo6, R.drawable.demo7, R.drawable.demo8, R.drawable.demo9,
     };
-
+//毕加索图片加载框架
     for (int resId : resIds) {
       Picasso.with(this)
           .load(resId)
@@ -38,7 +39,7 @@ public class PlaygroundActivity extends AppCompatActivity {
           .fetch();
     }
   }
-
+//视图
   private void initView() {
     final RecyclerView puzzleList = (RecyclerView) findViewById(R.id.puzzle_list);
     puzzleList.setLayoutManager(new GridLayoutManager(this, 2));
@@ -51,6 +52,7 @@ public class PlaygroundActivity extends AppCompatActivity {
 
     puzzleAdapter.setOnItemClickListener(new PuzzleAdapter.OnItemClickListener() {
       @Override public void onItemClick(PuzzleLayout puzzleLayout, int themeId) {
+//        跳转
         Intent intent = new Intent(PlaygroundActivity.this, ProcessActivity.class);
         if (puzzleLayout instanceof SlantPuzzleLayout) {
           intent.putExtra("type", 0);

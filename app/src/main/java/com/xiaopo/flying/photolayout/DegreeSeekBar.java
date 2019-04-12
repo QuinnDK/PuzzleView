@@ -105,7 +105,7 @@ public class DegreeSeekBar extends View {
     mIndicatorPath.rLineTo(-8, -8);
     mIndicatorPath.rLineTo(16, 0);
   }
-
+//当屏幕有Touch事件时，此方法就会被调用
   @Override public boolean onTouchEvent(MotionEvent event) {
     switch (event.getAction()) {
       case MotionEvent.ACTION_DOWN:
@@ -143,7 +143,7 @@ public class DegreeSeekBar extends View {
     }
     return true;
   }
-
+//贴图画
   @Override protected void onDraw(Canvas canvas) {
     super.onDraw(canvas);
     canvas.getClipBounds(mCanvasClipBounds);
@@ -252,7 +252,7 @@ public class DegreeSeekBar extends View {
           - mCurrentDegrees / 2 * mPointMargin, getHeight() / 2 - 10, mTextPaint);
     }
   }
-
+//翻滚到指定位置
   private void onScrollEvent(MotionEvent event, float distance) {
     mTotalScrollDistance -= distance;
     postInvalidate();
@@ -262,7 +262,7 @@ public class DegreeSeekBar extends View {
       mScrollingListener.onScroll(mCurrentDegrees);
     }
   }
-
+//设置系数范围
   public void setDegreeRange(int min, int max) {
     if (min > max) {
       Log.e(TAG, "setDegreeRange: error, max must greater than min");
@@ -277,7 +277,7 @@ public class DegreeSeekBar extends View {
       invalidate();
     }
   }
-
+//设置当前的系数
   public void setCurrentDegrees(int degrees) {
     if (degrees <= mMaxReachableDegrees && degrees >= mMinReachableDegrees) {
       mCurrentDegrees = degrees;
@@ -285,7 +285,7 @@ public class DegreeSeekBar extends View {
       invalidate();
     }
   }
-
+//设置翻滚手势监听
   public void setScrollingListener(ScrollingListener scrollingListener) {
     mScrollingListener = scrollingListener;
   }

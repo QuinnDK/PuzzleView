@@ -276,9 +276,11 @@ public class ProcessActivity extends AppCompatActivity implements View.OnClickLi
         puzzleView.rotate(90f);
         break;
       case R.id.btn_flip_horizontal:
+//        水平翻转
         puzzleView.flipHorizontally();
         break;
       case R.id.btn_flip_vertical:
+//        垂直翻转
         puzzleView.flipVertically();
         break;
       case R.id.btn_border:
